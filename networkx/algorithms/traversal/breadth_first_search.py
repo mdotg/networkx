@@ -77,6 +77,8 @@ def generic_bfs_edges(G, source, neighbors=None, depth_limit=None, sort_neighbor
         parent, depth_now, children = queue[0]
         try:
             child = next(children)
+            # Homework1 - print current nodes
+            print('Nodes -> [Parent: {0} - Children: {1}]'.format(parent, child))
             if child not in visited:
                 yield parent, child
                 visited.add(child)
