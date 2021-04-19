@@ -15,7 +15,7 @@ def greedy_path(G, source, target, heuristic=None, weight="weight"):
 
     if heuristic is None:
         # Heuristic h = 0 -> same as Dijkstra's algorithm
-        return nx.dijkstra_path(G, 'Arad', 'Bucharest')
+        return nx.dijkstra_path(G, source, target)
 
     push = heappush
     pop = heappop
